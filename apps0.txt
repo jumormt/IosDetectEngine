@@ -1,0 +1,36 @@
+com.sgccGdt.PockPower * 掌上电力 *
+com.texaspoker.moment * 德扑圈 *
+com.christine.VirtualDemoForiOS * VirtualDemoForiOS *
+com.adidas.allstar.cn * Confirmed *
+gov.nasa.NASA * NASA *
+io.lookmark.Lookmark * Lookmark *
+com.wemomo.momoappdemo1 * MOMO陌陌 *
+com.zhirong.yongqianbaoonline * 用钱宝 *
+com.chinapower.geiApp * GEI *
+com.ofo.Bicycle * ofo共享单车 *
+com.campmobile.snowcamera * B612咔叽 *
+com.tencent.QQKSong * 全民K歌 *
+DailySolitaire.PineEntertainment.Com * Daily Solitaire *
+com.noodlecake.bouncyhoops * Bouncy Hoops *
+cn.lnts.iosapp.sghome * S+365 *
+com.superbox.ios.starhexa * Star Link : HEXA *
+com.bupt13.337.testest * testest *
+com.tomatojoy.bfyfj * 八分音符-游戏输出全靠吼 *
+com.zhangtu.travel * 掌途 *
+com.quickbytegames.chezz * Chezz *
+com.xiachufang.recipe * 下厨房 *
+com.yunho.YuulinkCloud * 云合 *
+d.cn.Downjoy-Game-Center * 当乐游戏中心 *
+com.tinycorp.futurama * Futurama *
+com.highaltitudehacks.dvia * DVIA *
+com.psbc.mobilebank * 邮储银行 *
+com.meituan.itakeaway * 美团外卖 *
+studio.dream.crscesc * 罪案现场?逃离! *
+video.vue.unity * FOOTAGE *
+com.stencyl.dunkers * Dunkers *
+com.christine.BlockSample * BlockSample *
+com.cmbchina.MPBBank * 招商银行 *
+com.stencyl.Touchdowners * Touchdowners *
+com.momomobile.butterfly * 小熊油耗 *
+com.Qting.QTTour * 蜻蜓FM *
+com.lantern.wifikey.mobile * WiFi万能钥匙 *

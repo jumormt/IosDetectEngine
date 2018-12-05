@@ -1,0 +1,7 @@
+temp
+*.pyc
+.idea
+lib/detemp
+lib/report
+lib/logs/info.log
+lib/logs/warn.log
