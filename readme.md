@@ -1,31 +1,44 @@
-- 手机越狱
-    - 系统信息：8.1.1
-    - 机型：iPhone6
+__阅读本文档时请参考文末说明__
+
+# 手机越狱
+
+    ## 系统信息：8.1.1
+
+    ## 机型：iPhone6
 
         ![](readme/img/Snipaste_2018-11-28_16-32-28.png)
 
-    - [越狱步骤](http://jailbreak.25pp.com/jiaocheng/yueyu_69128.html)(ios8不再适用)
+    ## 越狱及修复闪退
+
+        - [越狱及修复闪退（参考）](http://jailbreak.25pp.com/jiaocheng/yueyu_69128.html)(ios8不再适用)
+
         - 越狱前务必在设备”设置”—“iCloud”—关闭“查找我的iPhone”
+
         - 越狱前务必在设备”设置”— ”Touch ID与密码”— ”关闭密码”
-    - 关闭ios更新 
+
+        - [使用太极越狱](http://www.taig.com/)
+
+        - [使用叉叉助手越狱](jb.xxzhushou.cn)
+
+        - [ios9解决cydia闪退的问题的可能办法](http://bbs.25pp.com/thread-515571-1-1.html)
+
+            进去https://jbme.qwertyoruiop.com这个网站，然后点击 go，等待几秒，出现对话框，all set后，点OK关闭对话框，锁屏等待即可恢复越狱。建议保存到桌面，没有网络时也可以打开。会在Safari中存储630kb的文件的，能看懂英文的都能懂，如果失败了多试几次，931亲测通过。这是利用Safari的漏洞，从网页执行了相同的代码实现的.
+
+
+    ## 关闭ios更新
 
         ![](readme/img/Snipaste_2018-11-28_16-30-17.png)
 
-    - [使用太极越狱](http://www.taig.com/)
 
-    - [使用叉叉助手越狱](jb.xxzhushou.cn)
-    
-    - [ios9解决cydia闪退的问题的可能办法](http://bbs.25pp.com/thread-515571-1-1.html)
-        
-        进去https://jbme.qwertyoruiop.com这个网站，然后点击 go，等待几秒，出现对话框，all set后，点OK关闭对话框，锁屏等待即可恢复越狱。建议保存到桌面，没有网络时也可以打开。会在Safari中存储630kb的文件的，能看懂英文的都能懂，如果失败了多试几次，931亲测通过。这是利用Safari的漏洞，从网页执行了相同的代码实现的.
+# 安装越狱工具
 
-- 安装越狱工具
+    ## `Cydia`商店安装内容（务必全部安装）
 
-    - 在`Cydia`商店安装`Cycript`、`MTerminal`、`OpenSSH` (默认密码为`alpine`,可输入命令`passwd`进行修改)、 `iFile`、`syslogd to /var/log/syslog`、`Class Dump`、`APT 0.6 Transitional`、`ipa installer`
+        `Cycript`、`MTerminal`、`OpenSSH` (默认密码为`alpine`,可输入命令`passwd`进行修改)、 `iFile`、`syslogd to /var/log/syslog`、`Class Dump`、`APT 0.6 Transitional`、`ipa installer`
 
-    - 'PLUTIL': {'COMMAND': 'plutil', 'PACKAGES': ['com.ericasadun.utilities']（待商榷）
+        - 'PLUTIL': {'COMMAND': 'plutil', 'PACKAGES': ['com.ericasadun.utilities']（待商榷）
 
-    - 安装`debugserver`
+    ## 安装`debugserver`
         
         - 将iPhone连接xcode并在`window->device`中添加，可在iPhone的`Developer/usr/bin`目录下找到debugserver，将debugserver拷出到OSX的`/path/to/debugserver`下
         - 给debugserver瘦身(iPhone6 arm64架构)
@@ -37,29 +50,29 @@
             `codesign -s - --entitlements /path/to/ent.plist -f debugserver`
         - 将处理过的debugserver拷回至iPhone的`/usr/bin`目录下并**赋予执行权限**
     
-    - 安装`Clutch`
+    ## 安装`Clutch`
 
         - 下载[Clutch](https://github.com/KJCracks/Clutch/releases)的最新release版本
         - 将`Clutch`拷贝至iPhone终端的`/usr/bin/Clutch`(注意要改成`Clutch`)目录下并**赋予执行权限**
 
-    - 安装[`Frida`](https://www.jianshu.com/p/a01970fdaac1)(未详细安装)
+    ## 安装[`Frida`](https://www.jianshu.com/p/a01970fdaac1)(未详细安装)
 
         - 打开cydia添加源：http://build/frida.re
         - 安装frida
     
-    - 安装gdb
+    ## 安装gdb
 
         - 添加源`cydia.radare.org`
     
     
 
-- 电脑端环境配置
+# 电脑端环境配置
 
-    - [安装java8及环境变量配置](https://blog.csdn.net/irokay/article/details/71374426)
+    ## [安装java8及环境变量配置](https://blog.csdn.net/irokay/article/details/71374426)
 
-    - [下载ida](https://xclient.info/s/hex-rays-ida-pro.html)
+    ## [下载ida](https://xclient.info/s/hex-rays-ida-pro.html)
 
-    - [theos安装方法](https://www.jianshu.com/p/d8a7e0381ff7)
+    ## [theos安装方法](https://www.jianshu.com/p/d8a7e0381ff7)
 
         - 安装`xcode`和`commandline`工具
 
@@ -113,13 +126,13 @@
 
         需要配置`nessus.py`的用户名和密码
 
-- 代码配置
+# 代码配置
 
     - `para_config.conf`中`[mobile]`部分需要配置
 
     - `nessus.py`的用户名和密码分别设为‘admin’ 和 ‘password’
 
-- 静态引擎配置
+# 静态引擎配置
     
     - conf/path_config.properties:1 需要配置ida的位置
     
@@ -127,7 +140,7 @@
 
     - 可执行程序的依赖为conf、rule和IDA文件夹
 
-- 说明
+# 说明
 
     - “`/path/to/requirements.txt`”表示`requirements.txt`文件的路径,需要确保可达
 
