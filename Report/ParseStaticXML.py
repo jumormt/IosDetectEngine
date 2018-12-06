@@ -14,7 +14,7 @@ class XMLParser:
     def start_parse(self):
         # find the xml
         report_dir = './temp/{}/report'.format(data.start_time)
-        static_finished = False
+        static_finished = False # 静态检测是否完成
         while not static_finished:
             for file in os.listdir(report_dir):
                 if file.endswith('.xml'):

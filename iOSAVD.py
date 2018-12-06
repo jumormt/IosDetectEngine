@@ -1,4 +1,10 @@
 #coding=utf-8
+'''
+Created on 2018年12月06日
+@author:
+@attention:
+'''
+
 import sys
 sys.path.append('modules/static/gen-py')
 import os
@@ -22,6 +28,15 @@ from datetime import datetime
 
 
 class IOS():
+    """程序入口类
+
+        程序入口类longer
+
+        Attributes:
+            connector: 'w'（表示wifi连接）or'u'（表示usb连接）
+            static_type: 'pdf'（输出结果为pdf） or 'xml'
+    """
+
     def __init__(self, ipa_path, bundle_id, connector, static_type=None):
         data.static_type = static_type
         if not data.logger:
@@ -34,7 +49,7 @@ class IOS():
             self.status = 4
         elif pre_status == 5:
             self.status = 5
-        self.t_static = static_analyze.static_analyzer()
+        self.t_static = static_analyze.static_analyzer() # 静态分析入口 do_analyse
         self.app_dynamic_info = AppDynamicInfo(data.app_bundleID)
         self.t_socket = socketServer.SocketServerThread(self.app_dynamic_info)
         self.server = Nessus()
@@ -226,15 +241,15 @@ class IOS():
     def stand_alone_entrance(self):
         # self.start_dynamic_check()
         IOS.binary_check()
-        # self.server_scan(','.join(String().get_url(data.strings)))
-        self.start_static_analyse()
-        # self.check_status()
+        # self.server_scan(','.join(String().get_url(data.strings))) # nessus
+        self.start_static_analyse() # 静态引擎是独立的引擎，可生成独立的报告
+        # self.check_status() # 动态检测timeout
         data.dynamic_json = self.app_dynamic_info
         self.analyse()
         IOS.storage_check()
-        report_gen = Generator()
+        report_gen = Generator() # 生成结果
         report_gen.generate()
-        Utils.printy("Analyze Done.", 4)
+        Utils.printy("Analyze Done.", 4) # 分析结束
         self.clean()
 
     def check_status(self):
@@ -275,7 +290,11 @@ class IOS():
     def clean(self):
         data.client.close()
 
+def main():
+    # IOS(None, None, 'w').paltform_entrance()
+    IOS(None, None, 'w', static_type='xml').stand_alone_entrance()
 
-# IOS(None, None, 'w').paltform_entrance()
-IOS(None, None, 'w', static_type='xml').stand_alone_entrance()
+if __name__ == '__main__':
+    main()
+
 
