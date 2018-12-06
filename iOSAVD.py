@@ -28,12 +28,12 @@ from datetime import datetime
 
 
 class IOS():
-    """程序入口类
+    """主要分析引擎入口类
 
-        程序入口类longer
+        分析引擎的入口类，此类可以实例化后单独运行，是单机版的静态检测引擎
 
         Attributes:
-            connector: 'w'（表示wifi连接）or'u'（表示usb连接）
+            connector: 'w'（表示wifi连接，采用ssh方式接入iPhone）or'u'（表示usb连接，不建议）
             static_type: 'pdf'（输出结果为pdf） or 'xml'
     """
 
@@ -247,7 +247,7 @@ class IOS():
         data.dynamic_json = self.app_dynamic_info
         self.analyse()
         IOS.storage_check()
-        report_gen = Generator() # 生成结果
+        report_gen = Generator() # 生成报告
         report_gen.generate()
         Utils.printy("Analyze Done.", 4) # 分析结束
         self.clean()

@@ -14,7 +14,7 @@ class Generator:
         self.write_binary_info()
         self.write_transport_info()
         self.write_storage_info()
-        if data.static_type == 'xml':
+        if data.static_type == 'xml': # 整合静态引擎生成的报告
             self.write_static_results()
         self.write_nessus_url()
 
