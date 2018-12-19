@@ -1,5 +1,25 @@
 __阅读本文档时请参考文末说明__
 
+- [手机越狱](#%E6%89%8B%E6%9C%BA%E8%B6%8A%E7%8B%B1)
+  - [系统信息：8.1.1](#%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF811)
+  - [机型：iPhone6](#%E6%9C%BA%E5%9E%8Biphone6)
+  - [越狱及修复闪退](#%E8%B6%8A%E7%8B%B1%E5%8F%8A%E4%BF%AE%E5%A4%8D%E9%97%AA%E9%80%80)
+  - [关闭ios更新](#%E5%85%B3%E9%97%ADios%E6%9B%B4%E6%96%B0)
+- [安装越狱工具](#%E5%AE%89%E8%A3%85%E8%B6%8A%E7%8B%B1%E5%B7%A5%E5%85%B7)
+  - [`Cydia`商店安装内容（务必全部安装）](#cydia%E5%95%86%E5%BA%97%E5%AE%89%E8%A3%85%E5%86%85%E5%AE%B9%E5%8A%A1%E5%BF%85%E5%85%A8%E9%83%A8%E5%AE%89%E8%A3%85)
+  - [安装`debugserver`](#%E5%AE%89%E8%A3%85debugserver)
+  - [安装`Clutch`](#%E5%AE%89%E8%A3%85clutch)
+  - [安装`Frida`(未详细安装)](#%E5%AE%89%E8%A3%85frida%E6%9C%AA%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85)
+  - [安装gdb](#%E5%AE%89%E8%A3%85gdb)
+- [电脑端环境配置](#%E7%94%B5%E8%84%91%E7%AB%AF%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE)
+  - [安装java8及环境变量配置](#%E5%AE%89%E8%A3%85java8%E5%8F%8A%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE)
+  - [下载ida](#%E4%B8%8B%E8%BD%BDida)
+  - [theos安装方法](#theos%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95)
+  - [其他配置](#%E5%85%B6%E4%BB%96%E9%85%8D%E7%BD%AE)
+- [代码配置](#%E4%BB%A3%E7%A0%81%E9%85%8D%E7%BD%AE)
+- [静态引擎配置](#%E9%9D%99%E6%80%81%E5%BC%95%E6%93%8E%E9%85%8D%E7%BD%AE)
+- [说明](#%E8%AF%B4%E6%98%8E)
+
 # 手机越狱
 
 ## 系统信息：8.1.1
@@ -39,7 +59,7 @@ __阅读本文档时请参考文末说明__
 - 'PLUTIL': {'COMMAND': 'plutil', 'PACKAGES': ['com.ericasadun.utilities']（待商榷）
 
 ## 安装`debugserver`
-        
+
 - 将iPhone连接xcode并在`window->device`中添加，可在iPhone的`Developer/usr/bin`目录下找到debugserver，将debugserver拷出到OSX的`/path/to/debugserver`下
 - 给debugserver瘦身(iPhone6 arm64架构)
 
@@ -59,12 +79,12 @@ __阅读本文档时请参考文末说明__
 
 - 打开cydia添加源：http://build/frida.re
 - 安装frida
-    
+
 ## 安装gdb
 
 - 添加源`cydia.radare.org`
-    
-    
+
+
 
 # 电脑端环境配置
 
@@ -135,7 +155,7 @@ __阅读本文档时请参考文末说明__
 - `nessus.py`的用户名和密码分别设为‘admin’ 和 ‘password’
 
 # 静态引擎配置
-    
+
 - conf/path_config.properties:1 需要配置ida的位置
 
 - IDAPython/IDAPython_sqlite.py 需要配置规则文件路径rule_dir
